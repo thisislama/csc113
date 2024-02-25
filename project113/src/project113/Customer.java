@@ -28,7 +28,7 @@ public class Customer {
 		 }
 //?? list it is not array here
 public Account selectAccount(Account list) {
-		if (accounts != null && accounts.length > 0){
+		if (accounts != null && accounts.length > 0){ // 1-
 			return list[0];
 			System.out.println("is that your selected account? enter y or n");
 		 char opt = in.nextChar();
@@ -41,7 +41,7 @@ public Account selectAccount(Account list) {
 		 char opt = in.nextChar();
 		 }
 		}// if end
-		else {
+		else { //2- 
 		System.out.println("You don't have accounts to select.");
 		return null;
 		}
