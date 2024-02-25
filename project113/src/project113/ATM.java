@@ -1,6 +1,5 @@
 package project113;
 
-//not finished missing 2 methods (validatePIN , displayMenu)
 public class ATM{ // ATM class added comment
 private int ATMName;
 private String location ;

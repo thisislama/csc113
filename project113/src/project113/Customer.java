@@ -5,7 +5,7 @@ public class Customer {
 	private int customerID ;
 	private String name ;
 	private String DOB ;
-	 Account[] accounts;
+	private Account[] accounts;
 	 private int numOfAccounts ;
 	
 	Customer (int cID , String name , String dob , int numAcc){
@@ -22,11 +22,11 @@ public class Customer {
 	}
 	public void addAccount(Account account) {
 		 if(numOfAccounts<accounts.length)//
-		 accounts[numOfAccounts++]=account;//add this
+		 accounts[numOfAccounts++]=new Account(account);//add this it is coposition so we add new 
 		 else
 		     System.out.println("Maximum account limit reach");
 		 }
-
+//?? list it is not array here
 public Account selectAccount(Account list) {
 		if (accounts != null && accounts.length > 0){
 			return list[0];
