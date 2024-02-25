@@ -17,15 +17,9 @@ public class Customer {
 	}
 	
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	}*//add
 	public int getCustomerID(){
 		return customerID;
 	}
-=======
->>>>>>> ad66fb498617512155bb63d2b03874706ba45062
 	public void addAccount(Account account) {
 		 if(numOfAccounts<accounts.length)//
 		 accounts[numOfAccounts++]=account;//add this
