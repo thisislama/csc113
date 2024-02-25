@@ -22,10 +22,20 @@ public class Customer {
 	}
 	public void addAccount(Account account) {
 		 if(numOfAccounts<accounts.length)//
-		 accounts[numOfAccounts++]=new Account(account);//add this it is coposition so we add new 
+		 accounts[numOfAccounts++]=new Account(account);//add this, since its composition so we add new 
 		 else
 		     System.out.println("Maximum account limit reach");
 		 }
+	
+	public int getCustomerID(){
+		return customerID;
+	}
+
+
+	public String toString() {
+	return "Customer ID= "+customerID+"\nName= "+name+"\nDate of Birth= "+DOB ;
+	}
+}
 //?? list it is not array here
 /*public Account selectAccount(Account list) {// no need of the method
 		if (accounts != null && accounts.length > 0){ // 1-
@@ -46,13 +56,4 @@ public class Customer {
 		return null;
 		}
 }*/ //error should return Account obj :)
-	
-	public int getCustomerID(){
-		return customerID;
-	}
 
-
-	public String toString() {
-	return "Customer ID= "+customerID+"\nName= "+name+"\nDate of Birth= "+DOB ;
-	}
-}
