@@ -2,13 +2,17 @@ package project113;
 import java.util.*;
 Static Scanner in = new Scanner(System.in);
 public class Customer {// by lama 
-	private String customerID ;
+	private int customerID ;
 	private String name ;
 	private String DOB ;
 	 Account[] accounts;
 	 private int numOfAccounts ;
 	
+<<<<<<< HEAD
+	Customer (int cID , String name , String dob ){
+=======
 	Customer (String cID , String name , String dob , int numAcc){
+>>>>>>> fbf3fcc3edc36cefd4a6d123473badee16956f7b
 		customerID = cID ;
 		this.name = name;
 		DOB = dob;
@@ -16,6 +20,12 @@ public class Customer {// by lama
 		numOfAccounts=0;
 	}
 
+<<<<<<< HEAD
+	}*/
+	public int getCustomerID(){
+		return customerID;
+	}
+=======
 	public void addAccount(Account account) {
 		 if(numOfAccounts<accounts.length)//
 		 accounts[numOfAccounts++]=account;//add this
@@ -28,6 +38,7 @@ public class Customer {// by lama
 	public Account selectAccount() {
 		if (accounts != null && accounts.length > 0){
 			return list[0];
+>>>>>>> fbf3fcc3edc36cefd4a6d123473badee16956f7b
 
 			System.out.println("is that your selected account? enter y or n");
 		 char opt = in.nextChar();

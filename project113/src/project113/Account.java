@@ -6,12 +6,13 @@ package project113;
 		 private boolean accountType;
 		 private Transactions[] transaction;
 		 private int numOfTransaction;
+		 private int PIN;
 		 
-		 
-		 public Account(String accNum,double balance,boolean accType,int maxTransaction){
+		 public Account(String accNum,double balance,boolean accType,int pin,int maxTransaction){
 		 this.accountNum=accNum;
 		 this.balance=balance;
 		 this.accountType=accType;
+		 PIN=pin;
 		 transaction=new Transactions[maxTransaction];
 		 numOfTransaction=0;
 		}
