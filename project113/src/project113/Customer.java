@@ -27,7 +27,7 @@ public class Customer {
 		     System.out.println("Maximum account limit reach");
 		 }
 //?? list it is not array here
-public Account selectAccount(Account list) {
+/*public Account selectAccount(Account list) {// no need of the method
 		if (accounts != null && accounts.length > 0){ // 1-
 			return list[0];
 			System.out.println("is that your selected account? enter y or n");
@@ -45,7 +45,7 @@ public Account selectAccount(Account list) {
 		System.out.println("You don't have accounts to select.");
 		return null;
 		}
-}// error should return Account obj :)
+}*/ //error should return Account obj :)
 	
 	public int getCustomerID(){
 		return customerID;
