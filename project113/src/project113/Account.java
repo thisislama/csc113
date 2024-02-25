@@ -7,6 +7,7 @@ package project113;
 		 private Transactions[] transaction;
 		 private int numOfTransaction;
 		 
+		 
 		 public Account(String accNum,double balance,boolean accType,int maxTransaction){
 		 this.accountNum=accNum;
 		 this.balance=balance;
@@ -15,15 +16,16 @@ package project113;
 		 numOfTransaction=0;
 		}
 		 public void addTransaction(Transactions transaction){
-		 if(numOfTransaction<transaction.length)//not an array ?
-		 transaction[numOfTransaction++]=transaction;//""
+		 if(numOfTransaction<this.transaction.length)// add this
+		 this.transaction[numOfTransaction++]=transaction;//add this
 		 else
 		     System.out.println("Maximum transaction limit reach");
 		 }
 		 public void checkBalance(){
 		 System.out.println("Balance= "+balance);
 		 }
-		 public abstract String withDrawLimit();
+		 public abstract String withDrawLimit(); //polymorphism method
+		 
 		 public String deposit(double amount) {
 		    if (amount <= 0) {
 		        return "Invalid deposit amount, Please enter a positive value.";
@@ -34,15 +36,20 @@ package project113;
 		}
 		 @Override
 		 public String toString(){
-		   String result= " account Number: "+accountNum+"\n balance: "+balance+"\n accountType: "+(accountType?"saving":"current")+"\n" ;
+		   String result = " account Number: "+accountNum+"\n balance: "+balance+"\n accountType: "+(accountType?"saving":"current")+"\n" ;
 		   if(transaction!=null){
 		       result+="Transactions:\n";
 		       for(int i=0;i<numOfTransaction;i++)
-		           result+=transaction[i].invoice()+"\n";//idk
+		           result+=transaction[i].invoice();//+"\n";//idk
 		     
 		   }
 		   return result;
 		 }
+		public double getBalance() {
+			return balance;
+		}
+		public void setBalance(double balance) {
+			this.balance = balance;
+		}
 		 }
 
-}

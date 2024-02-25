@@ -3,15 +3,15 @@ package project113;
 public class SavingAccount extends Account {
 private double intresetRate;
 
-public SavingAccount(double intresetRate) {
-super(accNum ,accType ,balance,maxTransaction) ;
+public SavingAccount(String accNum,double balance,boolean accType,int maxTransaction, double intresetRate) {
+super(accNum,balance,accType, maxTransaction) ;
 this.intresetRate= intresetRate ;
 }
 
-public String withDrawLimit(){
+public String withDrawLimit(){ //polymorphism method applied
 double transcationAmount= transcation.getAmount();
 
-if(transactionAmount<= balance){
+if(transcationAmount <= balance){
 balance-= transactionAmount;
 System.out.println("Withdrawal successful. Remaining balance: "+balance);}
 

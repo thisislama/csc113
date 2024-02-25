@@ -14,5 +14,9 @@ public class CurrentAccount extends Account{
 		
 		 return "This account does not have an overdraft limit" ;
 	}
+	
+	public String toString() {
+		return super.toString()+"\nOverdraft limit is: "+overdraftLimit ;
+	}
 
 }
