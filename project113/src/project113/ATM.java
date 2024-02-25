@@ -48,7 +48,11 @@ public Customer[] getCustomers() {
     }
 
 public boolean validatePIN(String PIN) {
-    
+    for (int i = 0; i < numOfCustomer; i++) 
+            if (CustomerList[i].getAccount().getPIN == PIN) 
+            return true ;
+
+            return false;
 }
 
 public void displayMenu() {

@@ -46,6 +46,9 @@ package project113;
 		   }
 		   return result;
 		 }
+		 public int getPIN() {
+			return PIN;
+		}
 		public double getBalance() {
 			return balance;
 		}
