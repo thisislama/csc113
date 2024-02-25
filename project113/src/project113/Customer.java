@@ -1,6 +1,6 @@
 package project113;
-import java.util.*;
-Static Scanner in = new Scanner(System.in);
+import java.util.*; // no need
+Static Scanner in = new Scanner(System.in); // no need ig?
 public class Customer { 
 	private int customerID ;
 	private String name ;
@@ -15,7 +15,6 @@ public class Customer {
 		accounts = new Account[numAcc];	
 		numOfAccounts=0;
 	}
-	
 
 	public int getCustomerID(){
 		return customerID;
