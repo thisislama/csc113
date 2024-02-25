@@ -1,14 +1,14 @@
 package project113;
 
 	public abstract class Account {
-		 private String accountNum;
+		 private int accountNum;
 		 private double balance;
 		 private boolean accountType;
 		 private Transactions[] transaction;
 		 private int numOfTransaction;
 		 private int PIN;
 		 
-		 public Account(String accNum,double balance,boolean accType,int pin,int maxTransaction){
+		 public Account(int accNum,double balance,boolean accType,int pin,int maxTransaction){
 		 this.accountNum=accNum;
 		 this.balance=balance;
 		 this.accountType=accType;
