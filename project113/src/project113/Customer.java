@@ -57,6 +57,8 @@ public class Customer {// by lama
 		}
 	}
 
+	//public
+
 	public String toString() {
 	return "Customer ID= "+customerID+"\nName= "+name+"\nDate of Birth= "+DOB ;
 	}
