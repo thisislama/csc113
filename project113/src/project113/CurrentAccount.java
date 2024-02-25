@@ -9,8 +9,10 @@ public class CurrentAccount extends Account{
 	}
 	
 	public String withDrawLimit() {
+		if ( overdraftLimit > 0 )
+			return "This account has an overdraft limit of: "+ overdraftLimit ;
 		
-		 return "Withdrawal limit: $" ;
+		 return "This account does not have an overdraft limit" ;
 	}
 
 }
