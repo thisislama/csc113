@@ -1,10 +1,10 @@
 package project113;
 
 //not finished missing 2 methods (validatePIN , displayMenu)
-public class ATM{
+public class ATM{ // ATM class added comment
 private int atmID;
 private String location ;
-private String branchCode ;
+private String branchCode ; 
 
 public ATM(int atmdID , String location ,String branchCode){
 this.atmID= atmdID ;
