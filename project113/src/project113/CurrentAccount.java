@@ -6,8 +6,9 @@ public class CurrentAccount extends Account{
 	CurrentAccount (String accNum,double balance,boolean accType,int maxTransaction, double overdraftLimit){
 		super(accNum , balance , accType ,maxTransaction );
 		this.overdraftLimit = overdraftLimit;
-	}
-	//add this method or not??
+	}//done 
+
+	//add this method or not?? 
 	public String withdraw(double amount) {
         if (balance + overdraftLimit - amount >= 0) {
             balance -= amount;
@@ -16,14 +17,19 @@ public class CurrentAccount extends Account{
             return "Insufficient funds. Withdrawal not allowed.";
         }
     }
-	public String withDrawLimit() {
+
+/* private void transactionHistory(){
+	
+}*/
+
+	public String withDrawLimit() { // done
 		if ( overdraftLimit > 0 )
 			return "This account has an overdraft limit of: "+ overdraftLimit ;
 		
 		 return "This account does not have an overdraft limit" ;
 	}
 	
-	public String toString() {
+	public String toString() { //done
 		return super.toString()+"\nOverdraft limit is: "+overdraftLimit ;
 	}
 

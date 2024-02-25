@@ -1,12 +1,12 @@
 package project113;
 
 	public abstract class Account {
-		 private int accountNum;
-		 private double balance;
-		 private boolean accountType;//delet??
-		 private Transactions[] transaction;
-		 private int numOfTransaction;
-		 private int PIN;
+		 protected int accountNum; // changed the modifier of the attibute to protected:)
+		 protected double balance;
+		 protected boolean accountType;//delet??
+		 protected Transactions[] transaction;
+		 protected int numOfTransaction;
+		 protected int PIN;
 		 
 		 public Account(int accNum,double balance,boolean accType,int pin,int maxTransaction){
 		 accountNum=accNum;
