@@ -27,7 +27,7 @@ public class Customer {
 		     System.out.println("Maximum account limit reach");
 		 }
 
-public Account selectAccount() {
+public Account selectAccount(Account list) {
 		if (accounts != null && accounts.length > 0){
 			return list[0];
 			System.out.println("is that your selected account? enter y or n");
