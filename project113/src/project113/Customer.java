@@ -21,7 +21,7 @@ public class Customer {// by lama
 	}
 
 <<<<<<< HEAD
-	}*/
+	}*//add
 	public int getCustomerID(){
 		return customerID;
 	}
