@@ -1,6 +1,6 @@
 package project113;
 
-public class Customer {
+public class Customer {// by lama 
 	private String customerID ;
 	private String name ;
 	private String DOB ;
