@@ -1,6 +1,7 @@
 package project113;
-import java.util.*; // no need
-Static Scanner in = new Scanner(System.in); // no need ig?
+import java.util.*; 
+static Scanner in = new Scanner(System.in); // 
+
 public class Customer { 
 	private int customerID ;
 	private String name ;
