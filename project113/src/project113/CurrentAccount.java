@@ -18,7 +18,7 @@ CurrentAccount (String accNum,double balance,boolean accType,int maxTransaction,
         }
     }
 
-/* private void transactionHistory(){
+/* public void transactionHistory(){
 	
 }*/
 
@@ -26,7 +26,7 @@ CurrentAccount (String accNum,double balance,boolean accType,int maxTransaction,
 		if ( overdraftLimit > 0 )
 			return "This account has an overdraft limit of: "+ overdraftLimit ;
 		
-		 return "This account does not have an overdraft limit" ;
+		 return "This account does not have an overdraft limit" ;// else
 	}
 	
 	public String toString() { //done
