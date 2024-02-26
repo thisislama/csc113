@@ -1,8 +1,9 @@
 package project113;
 import java.util.*; 
-static Scanner in = new Scanner(System.in); // 
 
 public class Customer { 
+
+	static Scanner in = new Scanner(System.in); 
 	private int customerID ;
 	private String name ;
 	private String DOB ;
@@ -24,20 +25,21 @@ if (accounts != null && accounts.length > 0){// first if
 		System.out.println("2- second account"+ accounts[1]);
 		int opt = in.nextInt();
 
-		switch opt { //opt cases
+		switch (opt) { //opt cases
 			case 1:
 				return accounts[0];
 				break;
-				case 2 ;
+				case 2 :
 				return accounts[1];
 				break;
 				default:
 				return "Invalid input.";
-		}	
+		}	// cases end
 	} else {
 		System.out.println("You don't have accounts to select. ");
 		return null;
-	}
+	} // else end
+}// method end
 
 
 	public void addAccount(Account account) {//done
@@ -61,25 +63,4 @@ if (accounts != null && accounts.length > 0){// first if
 
 
 
-
-//?? list it is not array here
-/*public Account selectAccount(Account list) {// no need of the method
-		if (accounts != null && accounts.length > 0){ // 1-
-			return list[0];
-			System.out.println("is that your selected account? enter y or n");
-		 char opt = in.nextChar();
-		 while (opt == 'n'){
-			int i =0;
-			return list[i++];
-			if (i >= accounts.length)
-			System.exit(0);
-			System.out.println("is that your selected account? enter y or n");
-		 char opt = in.nextChar();
-		 }
-		}// if end
-		else { //2- 
-		System.out.println("You don't have accounts to select.");
-		return null;
-		}
-}*/ //error should return Account obj :)
 
