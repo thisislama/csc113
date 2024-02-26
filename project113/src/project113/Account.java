@@ -46,12 +46,12 @@ package project113;
 		 @Override
 		 public String toString(){
 		   String result = " account Number: "+accountNum+"\n balance: "+balance+"\n accountType: "+(accountType?"saving":"current")+"\n" ;
-		   if(transaction!=null){
+		   if(transaction!=null){ 
 		       result+="Transactions:\n";
 		       for(int i=0;i<numOfTransaction;i++)
-		           result+=transaction[i].invoice();//+"\n";//idk
+		           result+=transaction[i].invoice();////idk
 		     
-		   }
+		   }// if end 
 		   return result;
 		 }
 		 public int getPIN() {
