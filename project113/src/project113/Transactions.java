@@ -10,17 +10,16 @@ public class Transactions {
 	     Date=date;
 	     AccountNo=accountNo;
 	  }
-	  public void invoice(){
-		  System.out.println("--------------------------------------------");
-		  System.out.println("              ATM TRANSACTION               ");
-		  System.out.println("--------------------------------------------");
-
-	      System.out.println("Transaction ID : "+transactionID);
-	      System.out.println("Amount : "+Amount);
-	      System.out.println("Date : "+Date);
-	      System.out.println("Account Number : "+AccountNo);
-		  System.out.println("--------------------------------------------");
-
+	  public String invoice(){
+    String result = "--------------------------------------------\n" +
+                    "              ATM TRANSACTION               \n" +
+                    "--------------------------------------------\n" +
+                    "Transaction ID : " + transactionID + "\n" +
+                    "Amount : " + Amount + "\n" +
+                    "Date : " + Date + "\n" +
+                    "Account Number : " + AccountNo + "\n" +
+                    "--------------------------------------------\n";
+    return result;
 	  }
 	public String getTransactionID() {
 		return transactionID;
