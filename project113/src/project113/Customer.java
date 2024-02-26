@@ -16,10 +16,30 @@ public class Customer {
 		numOfAccounts=0;
 	}
 
-	public int getCustomerID(){
-		return customerID;
+	public Account selectAccount(){
+if (accounts != null && accounts.length > 0){// first if		
+	    System.out.println("Select which account you want ");
+		System.out.println("1- first account"+ accounts[0]);
+		System.out.println("2- second account"+ accounts[1]);
+		int opt = in.nextInt();
+
+		switch opt { //opt cases
+			case 1:
+				return accounts[0];
+				break;
+				case 2 ;
+				return accounts[1];
+				break;
+				default:
+				return "Invalid input.";
+		}	
+	} else {
+		System.out.println("You don't have accounts to select. ");
+		return null;
 	}
-	public void addAccount(Account account) {
+
+
+	public void addAccount(Account account) {//done
 		 if(numOfAccounts<accounts.length)//
 		 accounts[numOfAccounts++]=new Account(account);//add this, since its composition so we add new 
 		 else
@@ -35,6 +55,12 @@ public class Customer {
 	return "Customer ID= "+customerID+"\nName= "+name+"\nDate of Birth= "+DOB ;
 	}
 }
+
+
+
+
+
+
 //?? list it is not array here
 /*public Account selectAccount(Account list) {// no need of the method
 		if (accounts != null && accounts.length > 0){ // 1-
