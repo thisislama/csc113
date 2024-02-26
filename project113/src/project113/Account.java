@@ -3,7 +3,7 @@ package project113;
 	public abstract class Account {
 		 protected int accountNum; // changed the modifier of the attibute to protected:)
 		 protected double balance;
-		 protected boolean accountType;//delet??
+		 protected char accountType;//delet??
 		 protected Transactions[] transaction;
 		 protected int numOfTransaction;
 		 protected int PIN;
@@ -16,6 +16,7 @@ package project113;
 		 this.transaction=new Transactions[acc.transaction.length];
 		 numOfTransaction=acc.numOfTransaction;
 		 }
+
 		 public Account(Account acc){
 		 accountNum=acc.accountNum;
 		 balance=acc.balance;
@@ -33,8 +34,11 @@ package project113;
 		 public void checkBalance(){
 		 System.out.println("Balance= "+balance);
 		 }
-		 public abstract String withDrawLimit(); //polymorphism method
 		 
+		 public abstract String withDrawLimit(); //polymorphism method or delet??
+		 public abstract String CheckAccountType();//polymorphism method
+		 public abstract String withdraw(double amount);//polymorphism method
+
 		 public String deposit(double amount) {
 		    if (amount <= 0) {
 		        return "Invalid deposit amount, Please enter a positive value.";

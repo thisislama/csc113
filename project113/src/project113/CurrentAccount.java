@@ -7,21 +7,23 @@ CurrentAccount (String accNum,double balance,boolean accType,int maxTransaction,
 		super(accNum , balance , accType ,maxTransaction );
 		this.overdraftLimit = overdraftLimit;
 	}//done 
-
-	//add this method or not?? 
+public String CheckAccountType(){
+return "Current Account"
+}
+	
 	public String withdraw(double amount) {
         if (balance + overdraftLimit - amount >= 0) {
             balance -= amount;
             return "Withdrawal successful. New balance: " + balance;
         } else {
-            return "Insufficient funds. Withdrawal not allowed.";
+            return "Withdrawal not allowed.";
         }
     }
 
 /* public void transactionHistory(){
 	
 }*/
-
+//delet withdrawlimit??
 	public String withDrawLimit() { // done
 		if ( overdraftLimit > 0 )
 			return "This account has an overdraft limit of: "+ overdraftLimit ;
