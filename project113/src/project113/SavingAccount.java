@@ -8,7 +8,8 @@ super(accNum,balance,accType, maxTransaction) ;
 this.intresetRate= intresetRate ;
 }
 
-public String withDrawLimit(){ //polymorphism method applied
+public String withDrawLimit(){ //polymorphism method applied 
+//why transaction is not in array ??
 double transcationAmount= transcation.getAmount();
 
 if(transcationAmount <= balance){

@@ -3,7 +3,7 @@ package project113;
 public class Bank {
     private String BankName;
     private String Address;
-    private String BranchCode;
+    private String BranchCode;// pri 
     private ATM[] ATMList;
     private int numOfATMs;
 

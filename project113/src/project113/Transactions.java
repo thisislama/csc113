@@ -1,11 +1,10 @@
 package project113;
 
 public class Transactions {
-	  private String transactionID;
+	  private int transactionID;
 	  private double Amount;
 	  private String Date;
-	  private String AccountNo;
-	  public Transactions (String id,double amount,String date,String accountNo){
+	  public Transactions (int id,double amount,String date,int accountNo){
 	   transactionID=id;   
 	     Amount=amount;
 	     Date=date;

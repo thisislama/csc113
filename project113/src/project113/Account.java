@@ -1,20 +1,29 @@
 package project113;
 
 	public abstract class Account {
-		 private String accountNum;
-		 private double balance;
-		 private boolean accountType;
-		 private Transactions[] transaction;
-		 private int numOfTransaction;
+		 protected int accountNum; // changed the modifier of the attibute to protected:)
+		 protected double balance;
+		 protected boolean accountType;//delet??
+		 protected Transactions[] transaction;
+		 protected int numOfTransaction;
+		 protected int PIN;
 		 
-		 
-		 public Account(String accNum,double balance,boolean accType,int maxTransaction){
-		 this.accountNum=accNum;
+		 public Account(int accNum,double balance,boolean accType,int pin,int maxTransaction){
+		 accountNum=accNum;
 		 this.balance=balance;
-		 this.accountType=accType;
+		 accountType=accType;
+		 PIN=pin;
+		 this.transaction=new Transactions[acc.transaction.length];
+		 numOfTransaction=acc.numOfTransaction;
+		 }
+		 public Account(Account acc){
+		 accountNum=acc.accountNum;
+		 balance=acc.balance;
+		 accountType=acc.accountType;
+		 PIN=acc.PIN;
 		 transaction=new Transactions[maxTransaction];
 		 numOfTransaction=0;
-		}
+		 }
 		 public void addTransaction(Transactions transaction){
 		 if(numOfTransaction<this.transaction.length)// add this
 		 this.transaction[numOfTransaction++]=transaction;//add this
@@ -45,6 +54,9 @@ package project113;
 		   }
 		   return result;
 		 }
+		 public int getPIN() {
+			return PIN;
+		}
 		public double getBalance() {
 			return balance;
 		}
