@@ -34,8 +34,6 @@ package project113;
 		 public void checkBalance(){
 		 System.out.println("Balance= "+balance);
 		 }
-		 
-		 public abstract String withDrawLimit(); //polymorphism method or delet??
 		 public abstract String CheckAccountType();//polymorphism method
 		 public abstract String withdraw(double amount);//polymorphism method
 

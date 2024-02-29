@@ -6,7 +6,7 @@ public class CurrentAccount extends Account{
 CurrentAccount (String accNum,double balance,boolean accType,int maxTransaction, double overdraftLimit){
 		super(accNum , balance , accType ,maxTransaction );
 		this.overdraftLimit = overdraftLimit;
-	}//done 
+	 
 public String CheckAccountType(){
 return "Current Account"
 }
@@ -19,19 +19,7 @@ return "Current Account"
             return "Withdrawal not allowed.";
         }
     }
-
-/* public void transactionHistory(){
-	
-}*/
-//delet withdrawlimit??
-	public String withDrawLimit() { // done
-		if ( overdraftLimit > 0 )
-			return "This account has an overdraft limit of: "+ overdraftLimit ;
-		
-		 return "This account does not have an overdraft limit" ;// else
-	}
-	
-	public String toString() { //done
+	public String toString() { 
 		return super.toString()+"\nOverdraft limit is: "+overdraftLimit ;
 	}
 
