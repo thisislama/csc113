@@ -46,10 +46,10 @@ if (accounts != null && accounts.length > 0){// first if
 		 if(numOfAccounts<accounts.length)
 		 {
 			if(account instanceof CurrentAccount)
-			accounts[numOfAccounts++]=new CurrentAccount(account);
+			accounts[numOfAccounts++]=new CurrentAccount((CurrentAccount)account);
 			else
 			if(account instanceof SavingAccount)
-			accounts[numOfAccounts++]=new SavingAccount(account);
+			accounts[numOfAccounts++]=new SavingAccount((SavingAccount)account);
 
 			return true;
 		 }
