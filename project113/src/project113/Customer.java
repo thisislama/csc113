@@ -59,7 +59,9 @@ if (accounts != null && accounts.length > 0){// first if
 	public int getCustomerID(){
 		return customerID;
 	}
-
+public Account getAccounts(){
+	return accounts;
+}
 
 	public String toString() {
 	return "Customer ID= "+customerID+"\nName= "+name+"\nDate of Birth= "+DOB ;
