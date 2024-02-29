@@ -7,6 +7,10 @@ public SavingAccount(String accNum,double balance,boolean accType,int maxTransac
 super(accNum,balance,accType, maxTransaction) ;
 this.intresetRate= intresetRate ;
 }
+public SavingsAccount(SavingsAccount saving) {
+        super(saving); // Call the superclass's copy constructor
+        this.interestRate = saving.interestRate;
+}
 public String CheckAccountType(){//polymorphism method applied
 return "Saving Account"
 }

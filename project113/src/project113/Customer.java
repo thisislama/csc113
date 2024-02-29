@@ -42,11 +42,18 @@ if (accounts != null && accounts.length > 0){// first if
 }// method end
 
 
-	public void addAccount(Account account) {//done
-		 if(numOfAccounts<accounts.length)//
-		 accounts[numOfAccounts++]=new Account(account);//add this, since its composition so we add new 
-		 else
-		     System.out.println("Maximum account limit reach");
+	public boolean addAccount(Account account) {//done
+		 if(numOfAccounts<accounts.length)
+		 {
+			if(account instanceof CurrentAccount)
+			accounts[numOfAccounts++]=new CurrentAccount(account);
+			else
+			if(account instanceof SavingAccount)
+			accounts[numOfAccounts++]=new SavingAccount(account);
+
+			return true;
+		 }
+		 return false;
 		 }
 	
 	public int getCustomerID(){

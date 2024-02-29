@@ -3,10 +3,16 @@ package project113;
 public class CurrentAccount extends Account{
 	private double overdraftLimit ; 
 	
-CurrentAccount (String accNum,double balance,boolean accType,int maxTransaction, double overdraftLimit){
-		super(accNum , balance , accType ,maxTransaction );
+CurrentAccount (String accNum,double balance,boolean accType,int pin,int maxTransaction, double overdraftLimit){
+		super(accNum , balance , accType ,pin,maxTransaction );
 		this.overdraftLimit = overdraftLimit;
-	 
+}
+
+public CurrentAccount(CurrentAccount current) {
+        super(current); // Call the superclass's copy constructor
+        this.overdraftLimit = current.overdraftLimit;
+    }
+	
 public String CheckAccountType(){
 return "Current Account"
 }

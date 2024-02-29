@@ -13,18 +13,17 @@ package project113;
 		 this.balance=balance;
 		 accountType=accType;
 		 PIN=pin;
-		 this.transaction=new Transactions[acc.transaction.length];
-		 numOfTransaction=acc.numOfTransaction;
-		 }
-
-		 public Account(Account acc){
-		 accountNum=acc.accountNum;
-		 balance=acc.balance;
-		 accountType=acc.accountType;
-		 PIN=acc.PIN;
 		 transaction=new Transactions[maxTransaction];
 		 numOfTransaction=0;
 		 }
+		 public Account(Account acc) {
+    this.accountNum = acc.accountNum;
+    this.balance = acc.balance;
+    this.accountType = acc.accountType;
+    this.PIN = acc.PIN;
+    this.transaction = new Transactions[acc.transaction.length];
+    this.numOfTransaction = acc.numOfTransaction;
+}
 		 public void addTransaction(Transactions transaction){
 		 if(numOfTransaction<this.transaction.length)// add this
 		 this.transaction[numOfTransaction++]=transaction;//add this
