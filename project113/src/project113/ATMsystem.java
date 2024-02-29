@@ -31,7 +31,8 @@ do{
             
             if(cID>=10000000 && cID<=99999999)
             System.out.println("Invalid customer ID, pleas try again");
-           }while(cID>=10000000 && cID<=99999999)
+           }
+           while(cID>=10000000 && cID<=99999999)
            
             System.out.println("Enter your name");
             in.next();
@@ -45,6 +46,7 @@ do{
             default:
                 System.out.println("Invalid choice. Please enter 1 for log in or 2 for sign up.");
         }
+        System.out.println("");
 	}
 
 }
