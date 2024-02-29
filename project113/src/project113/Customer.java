@@ -16,6 +16,7 @@ public class Customer {
       DOB = dob;
       accounts = new Account[2];	
       numOfAccounts=0;
+	  System.out.println("customer added successfully");
    }
 
    public Account selectAccount(){
