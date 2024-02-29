@@ -42,7 +42,6 @@ public class ATM{ // ATM class added comment
          if (CustomerList[i].getCustomerID() == customerID) 
             return CustomerList[i];
             
-        
       return null;
    }
 

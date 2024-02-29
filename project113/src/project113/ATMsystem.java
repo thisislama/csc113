@@ -18,7 +18,7 @@ ATM atm=new ATM("QuickTeller ATM" , "Located in Riyadh" , "RYD001", 50000);
         switch (choice) {
             case 1:
                 System.out.println("You chose to log in.");
-                 System.out.println("inter your customer id");
+                 System.out.println("Enter your customer id");
 //search customer and return obj 
 // user input pin and validatepin
                 break;
