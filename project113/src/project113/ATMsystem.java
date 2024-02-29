@@ -6,7 +6,7 @@ static Scanner in = new Scanner(System.in);
 		// TODO Auto-generated method stub
 
 // add ATM obj
-ATM atm=new ATM("QuickTeller ATM" , "location" , "branchCode", size);
+ATM atm=new ATM("QuickTeller ATM" , "Located in Riyadh" , "RYD001", 50000);
 
 // Ask the user if they want to log in or sign up
         System.out.println("Welcome to the ATM System!");
