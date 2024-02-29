@@ -46,9 +46,9 @@ public Customer[] getCustomers() {
         return null;
     }
 
-public boolean validatePIN(String PIN) {
-    for (int i = 0; i < numOfCustomer; i++) 
-            if (CustomerList[i].getAccount().getPIN == PIN) 
+public boolean validatePIN(String PIN, Customer c) {
+    //for (int i=0;i<numOfCustomer;i++ )
+            if (C.getAccount().getPIN == PIN) 
             return true ;
 
             return false;
