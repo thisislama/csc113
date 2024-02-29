@@ -10,11 +10,11 @@ public class Customer {
    public Account[] accounts;
    private int numOfAccounts ;
 	
-   Customer (int cID , String name , String dob , int numAcc){
+   Customer (int cID , String name , String dob){
       customerID = cID ;
       this.name = name;
       DOB = dob;
-      accounts = new Account[numAcc];	
+      accounts = new Account[2];	
       numOfAccounts=0;
    }
 
