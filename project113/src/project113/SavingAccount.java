@@ -22,7 +22,6 @@ public String withdraw(double amount) {//polymorphism method applied
             return "Withdrawal not allowed.";
         }
     }
-
 public String toString(){
 return super.toString()+"\nintreset earned= "+calculateInterest() ;
 }
