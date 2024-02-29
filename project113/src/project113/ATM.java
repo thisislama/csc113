@@ -1,13 +1,13 @@
 package project113;
 
 public class ATM{ // ATM class added comment
-private int ATMName;
+private String ATMName;
 private String location ;
 private String branchCode ; 
 private Customer[] CustomerList;
 private int numOfCustomer;
 
-public ATM(int ATMName , String location ,String branchCode,int size){
+public ATM(String ATMName , String location ,String branchCode,int size){
 this.ATMName= ATMName ;
 this.location= location ;
 this.branchCode= branchCode ;
