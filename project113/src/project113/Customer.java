@@ -1,8 +1,6 @@
 package project113;
 import java.util.*;
 
-import javax.lang.model.element.Name; 
-
 public class Customer { 
 
    static Scanner in = new Scanner(System.in); 
@@ -58,7 +56,7 @@ public class Customer {
    }
 	
    public String getName(){
-      return Name;
+      return name;
    }
    public int getCustomerID(){
       return customerID;

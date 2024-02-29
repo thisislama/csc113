@@ -3,7 +3,7 @@ package project113;
 	public abstract class Account {
 		 protected int accountNum; // changed the modifier of the attributes to protected:)
 		 protected double balance;
-		 protected char accountType;//delet??
+		 protected char accountType;//delete????? no need
 		 protected Transactions[] transaction;
 		 protected int numOfTransaction;
 		 protected int PIN;
@@ -11,7 +11,7 @@ package project113;
    public Account(int accNum,char accType,int pin,int maxTransaction){ //delete balance from constructor
       accountNum=accNum;
       balance=0;//changed
-      accountType=accType;
+      accountType=accType;//delete ig
       PIN=pin;
       transaction=new Transactions[maxTransaction];
       numOfTransaction=0;
@@ -19,7 +19,7 @@ package project113;
    public Account(Account acc) {
       this.accountNum = acc.accountNum;
       this.balance = acc.balance;
-      this.accountType = acc.getClass().getName();//changed
+      this.accountType = acc.accountType;//changed// need to delete
       this.PIN = acc.PIN;
       this.transaction = new Transactions[acc.transaction.length];
       this.numOfTransaction = acc.numOfTransaction;
@@ -50,7 +50,7 @@ package project113;
       if(transaction!=null){ 
          result+="Transactions:\n";
          for(int i=0;i<numOfTransaction;i++)
-            result+=transaction[i].invoice();////idk
+            result+=transaction[i].invoice();//
            
       }// if end 
       return result;

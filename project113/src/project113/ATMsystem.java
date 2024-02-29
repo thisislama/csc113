@@ -46,6 +46,8 @@ do{
                 System.out.println("Invalid choice. Please enter 1 for log in or 2 for sign up.");
         }//switch choice end
 
+
+//error customer1 can't resolve?
         System.out.println("Welcome "+customer1.getName()+"\nYour ID: "+customer1.getCustomerID());
         System.out.println("Select the account you want to access: ");
         System.out.println("1- Checking current account.\n2- Saving account.\n3-Exit.");
@@ -61,13 +63,25 @@ int option = in.nextInt();
         int PIN = in.nextInt();
         System.out.println("Enter the number of transaction your willing to make. ");
         int transNum=in.nextInt();
+        System.out.println("Enter your overdraft limit: ");
+        double limit=in.nextDouble();
         // current object added:
-        Account acc1= new CurrentAccount(acc1Num ,'c',PIN,transNum);
+        Account acc1= new CurrentAccount(acc1Num ,'c',PIN,transNum,limit);
 
         break;
 
         case 2:
-        break;
+        // saving account case
+        System.out.println("Enter your Account number and PIN: ");
+        int acc2Num =in.nextInt();
+        int PIN2 = in.nextInt();
+        System.out.println("Enter the number of transaction your willing to make. ");
+        int transNum2=in.nextInt();
+        System.out.println("Enter your interset rate: ");
+        double inteRate=in.nextDouble();
+        // saving object added:
+        Account acc2= new SavingAccount(acc2Num ,'s',PIN2,transNum2,inteRate); //accType may delete
+        break ;
 
         case3:
         System.out.println("Thank you for using this ATM.");
@@ -75,14 +89,32 @@ int option = in.nextInt();
         break;
 
         default:
-        System.out.println("Invalid choice. Please renter your option.");
+        System.out.println("Invalid choice. ");
        }//option switch end
 
        System.out.println("Select the account you want to access: ");
        System.out.println("1- Checking current account.\n2- Saving account.\n3-Exit.");
-       opt = in.nextInt(); //keep showing menu until customer exit
+       option = in.nextInt(); //keep showing menu until customer exit
         } while (option >=1 && option <=3);
 
-	}//main ends
+    }//main ends
+//Method for showing menu of the selected account since each one have different menu.. 
+    /*public int TransactionsMenu(Account acc){
+        int opt=0;
+        if ( acc instanceof CurrentAccount)
+          {  //Curren menu
+        System.out.println("-----Checking Current Account-----");
+        System.out.println("1) view Balance.\n2) withdraw cash.\n3) deposit cash.\n4) view last transaction.\n5) exit");
+         opt =in.nextInt();
+        }
+        else if (acc instanceof SavingAccount)
+          {  //Saving menu
+             System.out.println("-----Checking Current Account-----");
+             System.out.println("1) view Balance.\n2) withdraw cash.\n3) deposit cash.\n4) view last transaction.\n5) calculate interset rate. ");
+         opt=in.nextInt();   
+        }
+        return opt;
+
+    } method end here*/
 
 }

@@ -3,8 +3,8 @@ package project113;
 public class SavingAccount extends Account {
    private double intresetRate;
 
-   public SavingAccount(int accNum,double balance,char accType,int pin,int maxTransaction, double intresetRate) {
-      super(accNum,balance,accType,pin, maxTransaction) ;
+   public SavingAccount(int accNum,char accType,int pin,int maxTransaction, double intresetRate) {
+      super(accNum,accType,pin, maxTransaction) ;
       this.intresetRate= intresetRate ;
    }
    public SavingAccount(SavingAccount saving) {
