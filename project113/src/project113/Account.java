@@ -1,21 +1,12 @@
 package project113;
 
 	public abstract class Account {
-<<<<<<< HEAD
 		 protected int accountNum; // changed the modifier of the attributes to protected:)
 		 protected double balance;
 		 protected char accountType;//delet??
 		 protected Transactions[] transaction;
 		 protected int numOfTransaction;
 		 protected int PIN;
-=======
-   protected int accountNum; // changed the modifier of the attibute to protected:)
-   protected double balance;
-   protected char accountType;//delet??
-   protected Transactions[] transaction;
-   protected int numOfTransaction;
-   protected int PIN;
->>>>>>> 42c2001654068f343b204fc95abe4ad2597b9189
 		 
    public Account(int accNum,double balance,char accType,int pin,int maxTransaction){
       accountNum=accNum;
