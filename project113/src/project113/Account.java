@@ -8,9 +8,9 @@ package project113;
 		 protected int numOfTransaction;
 		 protected int PIN;
 		 
-   public Account(int accNum,double balance,char accType,int pin,int maxTransaction){
+   public Account(int accNum,char accType,int pin,int maxTransaction){ //delete balance from constructor
       accountNum=accNum;
-      this.balance=balance;
+      balance=0;//changed
       accountType=accType;
       PIN=pin;
       transaction=new Transactions[maxTransaction];
@@ -19,7 +19,7 @@ package project113;
    public Account(Account acc) {
       this.accountNum = acc.accountNum;
       this.balance = acc.balance;
-      this.accountType = acc.accountType;
+      this.accountType = acc.getClass().getName();//changed
       this.PIN = acc.PIN;
       this.transaction = new Transactions[acc.transaction.length];
       this.numOfTransaction = acc.numOfTransaction;

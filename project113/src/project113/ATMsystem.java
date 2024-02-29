@@ -31,8 +31,7 @@ do{
             
             if(cID>=10000000 && cID<=99999999)
             System.out.println("Invalid customer ID, pleas try again");
-           }
-           while(cID>=10000000 && cID<=99999999)
+           } while(cID>=10000000 && cID<=99999999);
            
             System.out.println("Enter your name");
             in.next();
@@ -45,8 +44,45 @@ do{
                 break;
             default:
                 System.out.println("Invalid choice. Please enter 1 for log in or 2 for sign up.");
-        }
-        System.out.println("");
-	}
+        }//switch choice end
+
+        System.out.println("Welcome "+customer1.getName()+"\nYour ID: "+customer1.getCustomerID());
+        System.out.println("Select the account you want to access: ");
+        System.out.println("1- Checking current account.\n2- Saving account.\n3-Exit.");
+
+int option = in.nextInt();
+        do{
+       switch (option){
+
+        case 1:
+        //curent account case
+        System.out.println("Enter your Account number and PIN: ");
+        int acc1Num =in.nextInt();
+        int PIN = in.nextInt();
+        System.out.println("Enter the number of transaction your willing to make. ");
+        int transNum=in.nextInt();
+        // current object added:
+        Account acc1= new CurrentAccount(acc1Num ,'c',PIN,transNum);
+
+        break;
+
+        case 2:
+        break;
+
+        case3:
+        System.out.println("Thank you for using this ATM.");
+        System.exit(0);
+        break;
+
+        default:
+        System.out.println("Invalid choice. Please renter your option.");
+       }//option switch end
+
+       System.out.println("Select the account you want to access: ");
+       System.out.println("1- Checking current account.\n2- Saving account.\n3-Exit.");
+       opt = in.nextInt(); //keep showing menu until customer exit
+        } while (option >=1 && option <=3);
+
+	}//main ends
 
 }

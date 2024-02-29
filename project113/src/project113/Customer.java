@@ -1,5 +1,7 @@
 package project113;
-import java.util.*; 
+import java.util.*;
+
+import javax.lang.model.element.Name; 
 
 public class Customer { 
 
@@ -55,6 +57,9 @@ public class Customer {
       return false;
    }
 	
+   public String getName(){
+      return Name;
+   }
    public int getCustomerID(){
       return customerID;
    }
