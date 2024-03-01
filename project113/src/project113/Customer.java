@@ -64,6 +64,9 @@ public class Customer {
    public Account[] getAccounts(){
       return accounts;
    }
+ public String getName(){
+   return name;
+   }
 
    public String toString() {
       return "Customer ID= "+customerID+"\nName= "+name+"\nDate of Birth= "+DOB ;
