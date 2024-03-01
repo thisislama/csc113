@@ -133,6 +133,10 @@ public class ATMsystem {
         System.out.println("1) view Balance.\n2) withdraw cash.\n3) deposit cash.\n4) view last transaction.\n5) exit");
          opt =in.nextInt();
         }
+<<<<<<< HEAD
+        System.out.println("");
+	}
+=======
         else if (acc instanceof SavingAccount)
           {  //Saving menu
              System.out.println("-----Checking Current Account-----");
@@ -144,6 +148,7 @@ public class ATMsystem {
     } method end here*/
    
    }
+>>>>>>> 8f6cbea80f1e7ab3f336fed87cd1b3c01f137da0
 
 }
    
