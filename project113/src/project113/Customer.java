@@ -29,10 +29,8 @@ public class Customer {
          switch (opt) { //opt cases
             case 1:
                return accounts[0];
-               break;
             case 2 :
                return accounts[1];
-               break;
             default:
             return null;
          }	// cases end
@@ -57,9 +55,6 @@ public class Customer {
       return false;
    }
 	
-   public String getName(){
-      return name;
-   }
    public int getCustomerID(){
       return customerID;
    }

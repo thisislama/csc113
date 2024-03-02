@@ -7,16 +7,16 @@ public class Transactions {
    private String transType;
    private LocalDateTime Date; //time getting back
 
-   public Transactions (int id,double amount,String date){
+   public Transactions (int id,double amount,String date){ //need to fix
       transactionID=id;   
       Amount=amount;
       Date=date;
    }
 
-   public Transactions(String transType , LocalDateTime time {
+   public Transactions(String transType , LocalDateTime time ){
       this.transType=transType;
       Date = time;
-   })
+   }
    public String invoice(){
       String result = "--------------------------------------------\n" +
                     "              ATM TRANSACTION               \n" +
