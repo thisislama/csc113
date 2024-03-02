@@ -1,14 +1,22 @@
 package project113;
+import java.time.LocalDateTime;//to get current time
 
 public class Transactions {
-   private int transactionID;
-   private double Amount;
-   private String Date;
+   private int transactionID; //refrence on the invoice 
+   private double Amount; //take it from Account
+   private String transType;
+   private LocalDateTime Date; //time getting back
+
    public Transactions (int id,double amount,String date){
       transactionID=id;   
       Amount=amount;
       Date=date;
    }
+
+   public Transactions(String transType , LocalDateTime time {
+      this.transType=transType;
+      Date = time;
+   })
    public String invoice(){
       String result = "--------------------------------------------\n" +
                     "              ATM TRANSACTION               \n" +
