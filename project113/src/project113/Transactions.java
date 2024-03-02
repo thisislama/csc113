@@ -22,6 +22,7 @@ public class Transactions {
                     "              ATM TRANSACTION               \n" +
                     "--------------------------------------------\n" +
                     "Transaction ID : " + transactionID + "\n" +
+                    "Transaction : "+transType+"\n"+
                     "Amount : " + Amount + "\n" +
                     "Date : " + Date + "\n" +
                     "--------------------------------------------\n";
