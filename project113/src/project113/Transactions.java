@@ -7,11 +7,11 @@ public class Transactions {
    private String transType;
    private LocalDateTime Date; //time getting back
 
-   public Transactions (int id,double amount,String date){ //need to fix
+  /* public Transactions (int id,double amount,String date){ //need to fix later
       transactionID=id;   
       Amount=amount;
       Date=date;
-   }
+   }*/
 
    public Transactions(String transType , LocalDateTime time ){
       this.transType=transType;

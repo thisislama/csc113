@@ -2,9 +2,9 @@ package project113;
 
 public class SavingAccount extends Account {
    private double intresetRate;
-
-   public SavingAccount(int accNum,char accType,int pin,int maxTransaction, double intresetRate) {
-      super(accNum,accType,pin, maxTransaction) ;
+// char accType have been delted by lama
+   public SavingAccount(int accNum,int pin,int maxTransaction, double intresetRate) {
+      super(accNum,pin, maxTransaction) ; 
       this.intresetRate= intresetRate ;
    }
    public SavingAccount(SavingAccount saving) {

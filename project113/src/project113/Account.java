@@ -3,15 +3,13 @@ package project113;
 	public abstract class Account {
 		 protected int accountNum; // changed the modifier of the attributes to protected:)
 		 protected double balance;
-		 protected char accountType;//delete????? no need
 		 protected Transactions[] transaction;
 		 protected int numOfTransaction;
 		 protected int PIN;
 		 
-   public Account(int accNum,char accType,int pin,int maxTransaction){ //delete balance from constructor
+   public Account(int accNum,int pin,int maxTransaction){ //delete balance from constructor
       accountNum=accNum;
       balance=0;//changed
-      accountType=accType;//delete ig
       PIN=pin;
       transaction=new Transactions[maxTransaction];
       numOfTransaction=0;
@@ -19,7 +17,6 @@ package project113;
    public Account(Account acc) {
       this.accountNum = acc.accountNum;
       this.balance = acc.balance;
-      this.accountType = acc.accountType;//changed// need to delete
       this.PIN = acc.PIN;
       this.transaction = new Transactions[acc.transaction.length];
       this.numOfTransaction = acc.numOfTransaction;
@@ -46,7 +43,7 @@ package project113;
    }
    @Override
    	 public String toString(){
-      String result = " account Number: "+accountNum+"\n balance: "+balance+"\n accountType: "+(accountType=='s'?"saving":"current")+"\n" ;
+      String result = " account Number: "+accountNum+"\n balance: "+balance+"\n";
       if(transaction!=null){ 
          result+="Transactions:\n";
          for(int i=0;i<numOfTransaction;i++)
