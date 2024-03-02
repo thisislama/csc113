@@ -1,4 +1,5 @@
 package project113;
+import java.lang.Math;
 import java.time.LocalDateTime;//to get current time
 
 public class Transactions {
@@ -17,7 +18,7 @@ public class Transactions {
       String result = "--------------------------------------------\n" +
                       "              ATM RECEIPT                   \n" +
                       "--------------------------------------------\n" +
-                      "Transaction # : " + transactionID + "\n" +
+                      "Transaction # : " + (int)(Math.random()*100000) + "\n" +
                       "Transaction Type: "+transType+"\n"+
                       "Amount : " + Amount + "\n" +
                       "Date : " + Date + "\n" +
