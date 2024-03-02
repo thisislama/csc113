@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.time.LocalDateTime;//to get current time
 
 public class ATMsjava{
    static Scanner in = new Scanner(System.in);
@@ -52,7 +53,8 @@ public class ATMsjava{
                   System.out.println("No accounts found for the customer.");
                }
                else
-               {boolean logged = true;
+               {
+                  boolean logged = true;
                   while (loggedIn) {
                      System.out.println("1. Deposit");
                      System.out.println("2. Withdraw");
@@ -67,15 +69,24 @@ public class ATMsjava{
                            double depositAmount = in.nextDouble();
                            String deposit = account.deposit(depositAmount);
                            System.out.println(deposit);
+                            //by lama 
+                           Transactions trans1 = new Transactions("Deposit",LocalDateTime.now());
+                            //by lama
                            break;
                         case 2:
                            System.out.print("Enter the amount to withdraw: ");
                            double withdrawAmount = in.nextDouble();
                            String withdraw = account.withdraw(withdrawAmount);
                            System.out.println(withdraw);
+                           //by lama 
+                           Transactions trans2 = new Transactions("Withdraw",LocalDateTime.now());
+                            //by lama
                            break;
                         case 3:
                            account.checkBalance();
+                            //by lama 
+                           Transactions trans3 = new Transactions("Check Balance",LocalDateTime.now());
+                            //by lama
                            break;
                         case 4:
                            logged = false;
@@ -84,9 +95,9 @@ public class ATMsjava{
                         default:
                            System.out.println("Invalid choice. Please try again.");
                            break;}
-                  }
-               }
-               break;
+                  }//while loop end
+               } //else end line 56
+               break; //log in case end ..
                
             case 2:
                int cID;

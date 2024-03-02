@@ -29,10 +29,12 @@ public class Customer {
          switch (opt) { //opt cases
             case 1:
                return accounts[0];
+               break;
             case 2 :
                return accounts[1];
+               break;
             default:
-               System.out.println("Invalid input.");
+            return null;
          }	// cases end
       } else 
          System.out.println("You don't have accounts to select. ");
