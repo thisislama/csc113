@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*; //يقول ايرور هنا بس احسه يتدلع لحد يعدله
 import java.time.LocalDateTime;//to get current time
 
 public class ATMsjava{
@@ -70,8 +70,9 @@ public class ATMsjava{
                            String deposit = account.deposit(depositAmount);
                            System.out.println(deposit);
                             //by lama 
-                           Transactions trans1 = new Transactions("Deposit",LocalDateTime.now());
-                            //by lama
+                           Transactions trans1 = new Transactions("Deposit",depositAmount,LocalDateTime.now());
+                           account.addTransaction(trans1);
+                           //by lama
                            break;
                         case 2:
                            System.out.print("Enter the amount to withdraw: ");
@@ -79,14 +80,16 @@ public class ATMsjava{
                            String withdraw = account.withdraw(withdrawAmount);
                            System.out.println(withdraw);
                            //by lama 
-                           Transactions trans2 = new Transactions("Withdraw",LocalDateTime.now());
-                            //by lama
+                           Transactions trans2 = new Transactions("Withdraw",withdrawAmount,LocalDateTime.now());
+                           account.addTransaction(trans2);
+                           //by lama
                            break;
                         case 3:
                            account.checkBalance();
                             //by lama 
-                           Transactions trans3 = new Transactions("Check Balance",LocalDateTime.now());
-                            //by lama
+                           Transactions trans3 = new Transactions("Check Balance",0,LocalDateTime.now());
+                           account.addTransaction(trans1);
+                           //by lama
                            break;
                         case 4:
                            logged = false;
@@ -99,7 +102,7 @@ public class ATMsjava{
                } //else end line 56
                break; //log in case end ..
                
-            case 2:
+            case 2://sign up case
                int cID;
                do{
                   System.out.println("Enter your customer ID (between 10000000 and 99999999)");
@@ -136,8 +139,8 @@ public class ATMsjava{
                      continue;
                   }
                
-                  customer.addAccount(accountCreation);
-               }
+                  customer.addAccount(accountCreation); //بيرجع صح او خطأ؟
+               }//for loop end
                boolean added = atm.addCustomer(customer);
                if (added) {
                   System.out.println("Customer added successfully.");
@@ -147,7 +150,7 @@ public class ATMsjava{
             
                
                break;
-            case 3:
+            case 3: //exit
                start = false;
                System.out.println("Thank you for using the ATM system. Goodbye!");
                break;

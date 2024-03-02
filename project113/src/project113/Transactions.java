@@ -7,25 +7,22 @@ public class Transactions {
    private String transType;
    private LocalDateTime Date; //time getting back
 
-  /* public Transactions (int id,double amount,String date){ //need to fix later
-      transactionID=id;   
-      Amount=amount;
-      Date=date;
-   }*/
-
-   public Transactions(String transType , LocalDateTime time ){
-      this.transType=transType;
-      Date = time;
+   public Transactions (String tType,double amount,LocalDateTime time){ //
+      //transactionID=0;// user don't enter   
+      Amount=amount;//from deposit/withdraw amount
+      Date=time;
    }
+
    public String invoice(){
       String result = "--------------------------------------------\n" +
-                    "              ATM TRANSACTION               \n" +
-                    "--------------------------------------------\n" +
-                    "Transaction ID : " + transactionID + "\n" +
-                    "Transaction : "+transType+"\n"+
-                    "Amount : " + Amount + "\n" +
-                    "Date : " + Date + "\n" +
-                    "--------------------------------------------\n";
+                      "              ATM RECEIPT                   \n" +
+                      "--------------------------------------------\n" +
+                      "Transaction # : " + transactionID + "\n" +
+                      "Transaction Type: "+transType+"\n"+
+                      "Amount : " + Amount + "\n" +
+                      "Date : " + Date + "\n" +
+                      "--------------------------------------------\n"+
+                      "         THANK YOU FOR USING OUR ATM        \n";
       return result;
    }
    public int getTransactionID() {
@@ -40,7 +37,6 @@ public class Transactions {
    public void setAmount(double amount) {
       Amount = amount;
    }
-	   
 	    
 }
 

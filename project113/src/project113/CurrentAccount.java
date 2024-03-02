@@ -3,7 +3,7 @@ package project113;
 public class CurrentAccount extends Account{
    private double overdraftLimit ; 
 	
-   CurrentAccount (int accNum,char accType,int pin,int maxTransaction, double overdraftLimit){
+   CurrentAccount (int accNum,int pin,int maxTransaction, double overdraftLimit){
       super(accNum ,pin,maxTransaction );
       this.overdraftLimit = overdraftLimit;
    }
