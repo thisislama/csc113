@@ -92,7 +92,7 @@ public class ATMsystem {
                      System.out.println("Enter your overdraft limit: ");
                      double limit=in.nextDouble();
                   // current object added:
-                     Account acc1= new CurrentAccount(acc1Num ,'c',PIN,transNum,limit);
+                     Account acc1= new CurrentAccount(acc1Num ,PIN,transNum,limit);
                   
                      break;
                
@@ -106,7 +106,7 @@ public class ATMsystem {
                      System.out.println("Enter your interset rate: ");
                      double inteRate=in.nextDouble();
                   // saving object added:
-                     Account acc2= new SavingAccount(acc2Num ,'s',PIN2,transNum2,inteRate); //accType may delete
+                     Account acc2= new SavingAccount(acc2Num ,PIN2,transNum2,inteRate); //accType may delete
                      break ;
                
                   case 3:
@@ -133,10 +133,6 @@ public class ATMsystem {
         System.out.println("1) view Balance.\n2) withdraw cash.\n3) deposit cash.\n4) view last transaction.\n5) exit");
          opt =in.nextInt();
         }
-<<<<<<< HEAD
-        System.out.println("");
-	}
-=======
         else if (acc instanceof SavingAccount)
           {  //Saving menu
              System.out.println("-----Checking Current Account-----");
@@ -147,8 +143,7 @@ public class ATMsystem {
    
     } method end here*/
    
-   }
->>>>>>> 8f6cbea80f1e7ab3f336fed87cd1b3c01f137da0
+   
 
 }
    
