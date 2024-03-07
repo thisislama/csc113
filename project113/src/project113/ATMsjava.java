@@ -55,13 +55,15 @@ public class ATMsjava{
                else
                {
                   boolean logged = true;
-                  while (loggedIn) {
+
+                  int option;
+                  do {
                      System.out.println("1. Deposit");
                      System.out.println("2. Withdraw");
                      System.out.println("3. Check Balance");
                      System.out.println("4. Logout");
                      System.out.print("Enter your choice: ");
-                     int option = in.nextInt();
+                      option = in.nextInt();
                   
                      switch (option) {
                         case 1:
@@ -98,7 +100,7 @@ public class ATMsjava{
                         default:
                            System.out.println("Invalid choice. Please try again.");
                            break;}
-                  }//while loop end
+                  } while ( option != 4);//do-while loop end
                } //else end line 56
                break; //log in case end ..
                
