@@ -94,6 +94,7 @@ public class ATMsjava{
                         case 4:
                            logged = false;
                            System.out.println("Logged out successfully.");
+                           System.exit(0);
                            break;
                         default:
                            System.out.println("Invalid choice. Please try again.");
