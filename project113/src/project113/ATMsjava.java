@@ -1,4 +1,4 @@
-import java.util.*; //يقول ايرور هنا بس احسه يتدلع لحد يعدله
+import java.util.*; 
 import java.time.LocalDateTime;//to get current time
 
 public class ATMsjava{
