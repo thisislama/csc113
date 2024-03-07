@@ -94,7 +94,6 @@ public class ATMsjava{
                         case 4:
                            logged = false;
                            System.out.println("Logged out successfully.");
-                           System.exit(0);
                            break;
                         default:
                            System.out.println("Invalid choice. Please try again.");
@@ -140,7 +139,7 @@ public class ATMsjava{
                      continue;
                   }
                
-                  customer.addAccount(accountCreation); //بيرجع صح او خطأ؟
+                  customer.addAccount(accountCreation); 
                }//for loop end
                boolean added = atm.addCustomer(customer);
                if (added) {
@@ -154,6 +153,7 @@ public class ATMsjava{
             case 3: //exit
                start = false;
                System.out.println("Thank you for using the ATM system. Goodbye!");
+               System.exit(0);
                break;
             default:
                System.out.println("Invalid choice. Please try again.");
