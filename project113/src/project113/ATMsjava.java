@@ -72,8 +72,14 @@ public class ATMsjava{
                            String deposit = account.deposit(depositAmount);
                            System.out.println(deposit);
                             //by lama 
+                            System.out.print("Do you want to print the receipt?(y or n) ");
+                           char receipt=in.next().charAt(0);
+                          
                            Transactions trans1 = new Transactions("Deposit",depositAmount,LocalDateTime.now());
                            account.addTransaction(trans1);
+                           
+                           if (receipt =='y') 
+                          System.out.println( trans1.invoice());   
                            //by lama
                            break;
                         case 2:
@@ -82,9 +88,16 @@ public class ATMsjava{
                            String withdraw = account.withdraw(withdrawAmount);
                            System.out.println(withdraw);
                            //by lama 
+                             System.out.print("Do you want to print the receipt?(y or n) ");
+                           char receipt2=in.next().charAt(0);
+
                            Transactions trans2 = new Transactions("Withdraw",withdrawAmount,LocalDateTime.now());
                            account.addTransaction(trans2);
+
+                            if (receipt2 =='y') 
+                          System.out.println( trans2.invoice());  
                            //by lama
+
                            break;
                         case 3:
                            account.checkBalance();
