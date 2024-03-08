@@ -18,12 +18,13 @@ public class Transactions {
       String result = "--------------------------------------------\n" +
                       "              ATM RECEIPT                   \n" +
                       "--------------------------------------------\n" +
-                      "Transaction # : " + (int)(Math.random()*100000) + "\n" +
+                      "Transaction # : " + (int)(Math.random()*1000000) + "\n" +
                       "Transaction Type: "+transType+"\n"+
                       "Amount : " + Amount + "\n" +
                       "Date : " + Date + "\n" +
                       "--------------------------------------------\n"+
-                      "         THANK YOU FOR USING OUR ATM        \n";
+                      "         THANK YOU FOR USING OUR ATM        \n"
+                      "--------------------------------------------\n";
       return result;
    }
    public int getTransactionID() {

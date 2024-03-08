@@ -17,12 +17,14 @@ public class CurrentAccount extends Account{
       return "Current Account";
    }
    public String withdraw(double amount) {
+      if ( balance > amount)
       if (balance + overdraftLimit - amount >= 0) {
          balance -= amount;
          return "Withdrawal successful. New balance: " + balance;
       } else {
          return "Withdrawal not allowed.";
       }
+      else return "Withdrawal not allowed.";
    }
    public String toString() { 
       return super.toString()+"\nOverdraft limit is: "+overdraftLimit ;

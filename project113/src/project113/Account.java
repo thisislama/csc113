@@ -42,14 +42,8 @@ package project113;
       }
    }
    @Override
-   	 public String toString(){
-      String result = " account Number: "+accountNum+"\n balance: "+balance+"\n";
-      if(transaction!=null){ 
-         result+="Transactions:\n";
-         for(int i=0;i<numOfTransaction;i++)
-            result+=transaction[i].invoice();//
-           
-      }// if end 
+   	 public String toString(){ // update
+      String result = " account Number: "+accountNum+"\nNumber of Transactions you completed: "+numOfTransaction;;
       return result;
    }
    public int getPIN() {
