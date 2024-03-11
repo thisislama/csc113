@@ -1,7 +1,7 @@
-package project113;
 
+package csc113;
 	public abstract class Account {
-		 protected int accountNum; // changed the modifier of the attributes to protected:)
+		 protected int accountNum; 
 		 protected double balance;
 		 protected Transactions[] transaction;
 		 protected int numOfTransaction;
@@ -9,7 +9,7 @@ package project113;
 		 
    public Account(int accNum,int pin,int maxTransaction){ //delete balance from constructor
       accountNum=accNum;
-      balance=0;//changed
+      balance=0;
       PIN=pin;
       transaction=new Transactions[maxTransaction];
       numOfTransaction=0;
